@@ -11,7 +11,7 @@ function ResultPageYes() {
       />
 
       <div className='text-1'>
-        <p>You have chances of Breast Cancer</p>
+        <p>There is a possibility of developing breast cancer</p>
       </div>
 
       {/* Using Link to go to homepage */}

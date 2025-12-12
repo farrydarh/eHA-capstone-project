@@ -25,7 +25,9 @@ const navigate = useNavigate();
         
         const values = [id1, id2, id3, id4, id5, id6, id7, id8, id9].map(Number);
             
-         const incomplete = values.some(val => val === 0 || isNaN(val));
+        const incomplete = [id1, id2, id3, id4, id5, id6, id7, id8, id9].some(
+           val => val === "" || val === null || val === undefined
+    );
        if (incomplete) {
          navigate("/result-incomplete"); // page that says "please complete all inputs"
          return; // stop execution here

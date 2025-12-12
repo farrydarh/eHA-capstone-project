@@ -12,7 +12,7 @@ function ResultPageNo() {
              
             <div className='text-2'>
 
-               <p>You are free from breast cancer</p>
+               <p>You are free from breast cancer.</p>
             </div>
 
              {/* Using Link to go to homepage */}

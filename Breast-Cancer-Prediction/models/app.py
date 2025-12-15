@@ -24,9 +24,8 @@ def predict():
 
   if output == 4:
         return render_template('ResultPageYes.tsx')
-
-  elif:
-        return render_template('ResultPageNo.tsx')
+  elif output != 4:
+     return render_template('ResultPageNo.tsx')
   else:
     return render_template('ResultPageIncomplete.tsx')
 

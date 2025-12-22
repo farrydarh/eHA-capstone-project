@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
 from sklearn.metrics import (
     accuracy_score, roc_auc_score, roc_curve,
     confusion_matrix, classification_report,
@@ -19,7 +20,7 @@ def evaluate_models_full(models, X_test, y_test, export_csv=True):
         print(f"Evaluating Model: {name}")
         print("="*70)
 
-        # ----- Safe probability extraction -----
+        # ----- Safe probability extraction ----- #
         y_proba = None
         if hasattr(model, "predict_proba"):
             try:
@@ -33,10 +34,10 @@ def evaluate_models_full(models, X_test, y_test, export_csv=True):
             except:
                 print(f"⚠ {name} cannot produce probability scores — ROC/AUC will be skipped.")
 
-        # ----- Predictions -----
+        # ----- Predictions ----- #
         y_pred = model.predict(X_test)
 
-        # ----- Metrics -----
+        # ----- Metrics ----- #
         accuracy = accuracy_score(y_test, y_pred)
         f1 = f1_score(y_test, y_pred)
         roc_auc = roc_auc_score(y_test, y_proba) if y_proba is not None else None
@@ -50,14 +51,14 @@ def evaluate_models_full(models, X_test, y_test, export_csv=True):
 
         f1_scores[name] = f1
 
-        # ----- Confusion matrix -----
+        # ----- Confusion matrix ----- #
         cm = confusion_matrix(y_test, y_pred)
         confusion_matrices[name] = cm
 
-        # ----- Classification Report -----
+        # ----- Classification Report ----- #
         print(classification_report(y_test, y_pred))
 
-        # ----- ROC info -----
+        # ----- ROC info ----- #
         if y_proba is not None:
             fpr, tpr, _ = roc_curve(y_test, y_proba)
             precision, recall, _ = precision_recall_curve(y_test, y_proba)

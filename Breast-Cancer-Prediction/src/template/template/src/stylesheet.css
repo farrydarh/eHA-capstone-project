@@ -1,0 +1,193 @@
+.container-text {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ 
+  padding-inline: clamp(1.5rem, 8vw, 12rem);
+}
+.homepage-image {
+    background-image: url(/images/homepage.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 100svh;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+}
+.text-on-img {
+  max-width: 700px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 3px 10px rgba(29, 27, 27, 0.6);
+}
+
+.text-on-img h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  font-family: "Pacifico, cursive"
+}
+
+.description {
+  margin-top: 0.5rem;
+}
+
+.description p {
+  font-size: clamp(1.9rem, 3.5vw, 2.1rem);
+  font-family: "Poppins, sans-serif";
+  margin: 0;
+  line-height: 1.5;
+}
+.next-btn {
+  background-color: #d84c78;  
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 55px;
+  border: #d84c78;
+  color: white; 
+  font-family: "Poppins, sans-serif";
+  text-shadow: 0 3px 10px rgba(29, 27, 27, 0.6);
+}
+.next-btn:hover {
+  background-color: #FF1493;
+}
+
+.box {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+
+
+@media (max-width: 480px) {
+  .text-on-img h1 {
+    font-size: 1.7rem;
+  }
+    .description p {
+        font-size: clamp(1.2rem, 4.2vw, 2.0rem);
+    }
+
+   .homepage-image {
+     background-image: url(/images/Breast-Cancer-BG.webp);
+     background-position: center top; /* avoids cut-off bottom */}
+
+  .container-text {
+    align-items: center;
+    padding-top: 4rem;
+  }
+  .next-btn {
+  font-size: 1.5rem;
+  border-radius: 55px;
+  border: #d84c78;
+  color: white; 
+  font-family: "Poppins, sans-serif"
+  }
+}
+
+  .nextpage-image{
+    background-image: url(/images/nextpage.jpg);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 100svh;
+    position: absolute;
+    inset: 0;
+    z-index: -1;}
+
+  .diagnosis-title{
+      position: relative;      
+      top: 1px;               
+      left: 50%;               
+      transform: translateX(-50%);  
+      color: #C71585;
+      text-align: center;
+      font-size: 90px;
+      font-weight: bold;
+      width: 100%;
+     ; 
+    }
+ 
+.id-group {
+  display: flex;          
+  align-items: center;    
+  gap: 10px; 
+  margin-top: 15px;
+  flex-direction: initial 
+}
+
+.id-group label {
+  width: 200px;
+  font-size: 20px;
+  color: #0c070b;
+  text-shadow: 0 3px 10px rgba(201, 85, 149, 0.6);
+}
+
+.id-group input {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.id-group button {
+  padding: 10px 20px;
+  background-color:#C71585;
+  text-shadow: 0 1px 10px rgba(39, 27, 27, 1.6);
+  color: #FFFAFA;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 5px;
+}
+
+   
+ .nxt-btn {
+    margin: 40px auto 0;   /* ⬅ centers horizontally */
+    padding: 10px 10px;
+    background-color: #C71585;
+    color: #FFFAFA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 38px;
+    transition: 0.3s;
+    display: block;        /* ⬅ required */
+}
+.ids-container{
+       padding: 1rem;
+       margin: 0 auto;      
+       max-width: 500px; 
+      }
+
+
+  @media (max-width: 480px) {
+    .nextpage-image {
+     background-image: url(/images/nxtmobile.png);
+     background-position: center top; /* avoids cut-off bottom */
+    }
+    
+    .diagnosis-title{
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+      top: 20px; 
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+      width: 100%;
+      position:absolute;   
+    }
+    .ids-container{
+       padding: 1.0rem;
+    }
+    .nxt-btn {
+       display: block;
+       margin: 10px auto;
+       font-size: 25px;
+    }
+  } 

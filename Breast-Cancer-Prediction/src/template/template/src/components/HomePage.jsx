@@ -12,24 +12,23 @@ function HomePage() {
 
      return (
         <div className='container'>
-        <img 
-          src="/images/breast-cancer-bg.png"
-          alt="Homepage" className='homepage-image'
-          
-        />
+        <div className='homepage-image'></div>
        
-
+        <div className='container-text'>
         <div className='text-on-img'>
-          <h1 style={{ fontFamily: "Pacifico, cursive" }}><b>Benign and Malignant Breast Turmor Prediction</b></h1>
+          <h1>Breast Tumor Prediction for Medical Practitioners<b></b></h1>
 
            <div className='description'>
-             <p style={{ fontFamily: "Poppins, sans-serif" }}>
-             Early detection of breast cancer saves lives. It is the most common cancer in women, but better awareness and research have improved treatment and survival. Detecting it early and using personalized care are crucial.</p>
+             <p>Using patient data, this software helps medical professionals determine whether a breast tumor is benign or malignant.</p>
+             <p>It is intended to assist clinical evaluation, early identification, and well-informed decision-making.</p>
+             <p>The system does not take the role of established diagnostic methods or professional medical judgment; rather, it is a supportive tool.</p>
            </div>
 
            <button className='next-btn' onClick={nextPage}>
-               Test The Model
+               Enter Patient Data
            </button>
+
+           </div>
             
         </div>
       </div>

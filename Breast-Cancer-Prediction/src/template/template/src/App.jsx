@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
+import './stylesheet.css'
 
 
 //my components
@@ -9,7 +9,6 @@ import HomePage from './components/HomePage';
 import NextPage from './components/NextPage';
 import ResultPageYes  from './components/ResultPageYes';
 import ResultPageNo  from  './components/ResultPageNo';
-import ResultPageIncomplete from './components/ResultPageIncomplete';
 
 
 
@@ -25,7 +24,6 @@ function App() {
         <Route path='/next' element={<NextPage />} />
         <Route path='/result-cancer' element={<ResultPageYes />} />
         <Route path='/result-healthy' element={<ResultPageNo />} />
-        <Route path='/result-incomplete' element={<ResultPageIncomplete />} />
       </Routes>
     </Router>
       
